@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 500;
+}
+
+/* set up the body */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.xl {
+  font-size: 56px;
+  line-height: 70px;
+  font-weight: 800;
+  color: #13183e;
+}
+
+.lg {
+  font-size: 40px;
+  line-height: 51px;
+  font-weight: 800;
+  color: #13183e;
+}
+
+.med {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+  color: #13183e;
+}
+@media (min-width: 380px) {
+  .med {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #13183e;
+  }
+}
+
+.sm {
+  font-size: 20px;
+  line-height: 25.2px;
+  font-weight: 800;
+  color: #13183e;
+}
+@media (min-width: 380px) {
+  .sm {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+    color: #13183e;
+  }
+}
+
+.xsm {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #84879a;
+}
+
+.xxsm {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #84879a;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 35.28px;
+  text-decoration: none;
+}
+@media (min-width: 380px) {
+  .logo {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 45.36px;
+    text-decoration: none;
+  }
+}
+.logo.header {
+  color: #13183e;
+}
+.logo.footer {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn {
+  max-width: 100%;
+  border-radius: 28px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  text-transform: capitalize;
+}
+@media (min-width: 380px) {
+  .btn {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+  }
+}
+.btn.btn-dark {
+  background-color: #13183e;
+}
+.btn.btn-dark:hover, .btn.btn-dark:active {
+  background-color: #666ca3;
+}
+.btn.btn-pink {
+  background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  padding: 0.9rem 2rem;
+}
+.btn.btn-pink:hover, .btn.btn-pink:active {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+.btn.btn-purple {
+  background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+}
+.btn.btn-purple:hover, .btn.btn-purple:active {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+}
+
+.cta {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #f7457d;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.cta:hover, .cta:active {
+  color: #ffa8c4;
+}
+
+nav .footer,
+nav .header {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 1rem;
+}
+.hero-content * {
+  margin-bottom: 1.5rem;
+}
+
+.card-component {
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  margin-top: 1rem;
+  background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.card-component h2 {
+  color: white;
+}
+
+.card-component--cta {
+  border-radius: 15px;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  padding: 3rem;
+  position: relative;
+  margin-top: 3rem;
+  background-color: white;
+}
+.card-component--cta .card-body h3, .card-component--cta .card-body p {
+  margin-top: 1rem;
+}
+.card-component--cta .card-icon {
+  position: absolute;
+  top: -28px;
+  left: 47px;
+}
+
+footer {
+  background: #13183e;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 5rem 1rem;
+}
+@media (min-width: 380px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
