@@ -2,6 +2,9 @@
 
 $font-family: 'Plus Jakarta Sans', sans-serif;
 
+//media queries
+$desktop: 1260px;
+$tablet: 765px;
 // colors
 
 $dark-blue-gray: hsla(234, 25%, 52%, 1);
@@ -111,7 +114,7 @@ select {
   line-height: 32px;
   font-weight: 800;
   color: $blue;
-  @media (min-width: 380px) {
+  @media (min-width: $desktop) {
     font-size: 32px;
     line-height: 40px;
     font-weight: 800;
@@ -123,7 +126,7 @@ select {
   line-height: 25.2px;
   font-weight: 800;
   color: $blue;
-  @media (min-width: 380px) {
+  @media (min-width: $desktop) {
     font-size: 24px;
     line-height: 28px;
     font-weight: 800;
@@ -148,7 +151,7 @@ select {
   font-size: 28px;
   line-height: 35.28px;
   text-decoration: none;
-  @media (min-width: 380px) {
+  @media (min-width: $desktop) {
     font-weight: 800;
     font-size: 36px;
     line-height: 45.36px;
@@ -182,7 +185,7 @@ a {
   padding: 0.5rem 1.5rem;
   border: none;
   text-transform: capitalize;
-  @media (min-width: 380px) {
+  @media (min-width: $desktop) {
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
@@ -273,6 +276,10 @@ nav {
   margin-top: 3rem;
   background-color: $white;
 
+  @media (min-width: $tablet) {
+    padding: 1.5rem;
+  }
+
   .card-body {
     & h3,
     & p {
@@ -293,12 +300,72 @@ footer {
 
 //layout
 
+// .hero-content {
+//   @media (min-width: $tablet) {
+//     display: grid;
+//     grid-template-columns: 55%, 1fr;
+//   }
+// }
+.hero-container {
+  @media (min-width: $tablet) {
+    // display: grid;
+    // grid-template-columns: min-content;
+    // grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: 1fr 45%;
+    // grid-template-areas: 'hero-content image';
+    display: flex;
+    padding-bottom: 13rem;
+    // justify-content: flex-start;
+    // align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 880px;
+  }
+  .hero-content {
+    @media (min-width: $tablet) {
+      //   grid-area: 'hero-content';
+      width: 50%;
+    }
+  }
+
+  .hero-image {
+    @media (min-width: $tablet) {
+      grid-area: 'image';
+      //   position: relative;
+    }
+  }
+
+  img {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -210px;
+      left: 294px;
+      z-index: -1;
+      overflow: hidden;
+      //   this keeps getting overwritten???
+      //   grid-area: 'image';
+      // this is bullshit that I try when i think absolute position isn't the way to go
+      //   max-height: fit-content;
+      //   width: 100%;
+      //   height: 100%;
+      //   object-fit: contain;
+    }
+  }
+}
+
 .card-grid {
   display: flex;
   flex-direction: column;
   padding: 0 1rem 5rem 1rem;
 
-  @media (min-width: 380px) {
+  @media (min-width: $tablet) {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
