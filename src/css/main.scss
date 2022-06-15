@@ -317,47 +317,55 @@ footer {
 //     grid-template-columns: 55%, 1fr;
 //   }
 // }
-// .hero {
-//   position: relative;
-// }
-.hero-container {
+.hero {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  min-height: 60vh;
+  width: 100%;
+  align-items: center;
+
   @media (min-width: $tablet) {
-    // display: grid;
-    // grid-template-columns: min-content;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: 1fr 45%;
-    // grid-template-areas: 'hero-content image';
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 6rem;
-    // justify-content: flex-start;
-    // align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // padding-bottom: 6rem;
     overflow: hidden;
-    // position: relative;
-    max-width: 880px;
-    // overflow: hidden;
+    position: relative;
+    // align-items: center;
+    // max-width: 880px;
+    // flex: 1 1;
+  }
+  @media (min-width: $desktop) {
+    // padding-bottom: 20rem;
   }
   .hero-content {
     @media (min-width: $tablet) {
       //   grid-area: 'hero-content';
       width: 50%;
+      flex-grow: 75%;
+      //   flex: 1 1 50%;
     }
   }
-  .hero-image {
+  .hero-image-container {
     @media (min-width: $tablet) {
-      // flex-basis: 20px;
+      //   flex-basis: 20px;
       //   grid-area: 'image';
       //   position: relative;
       //   overflow: hidden;
+      flex: 1 1 0;
+      //   width: 50%;
+
+      position: relative;
     }
   }
 
   img {
     @media (min-width: $tablet) {
       position: absolute;
-      top: -182px;
-      left: 315px;
+      top: -394px;
+      left: -36px;
       z-index: -1;
+      max-width: 700px;
       //   overflow: hidden;
       //   flex-basis: 20px;
 

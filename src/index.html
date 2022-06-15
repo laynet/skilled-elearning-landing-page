@@ -22,35 +22,35 @@
     </nav>
     <!-- ****************** HERO ******************* -->
     <section class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 class="lg">Maximize skill, minimize budget</h1>
-          <p class="xsm">
-            Our modern courses across a range of in-demand skills will give you
-            the knowledge you need to live the life you want.
-          </p>
-          <a href="#" class="btn btn-pink">get started</a>
-        </div>
-        <!-- need to figure out how to turn this off in media query -->
-        <picture id="hero-mobile">
-          <source
-            media="(min-width: 768)"
-            srcset="./assets/image-hero-mobile.webp"
-            type="image/webp"
-          />
+      <!-- <div class="hero-container"> -->
+      <div class="hero-content">
+        <h1 class="lg">Maximize skill, minimize budget</h1>
+        <p class="xsm">
+          Our modern courses across a range of in-demand skills will give you
+          the knowledge you need to live the life you want.
+        </p>
+        <a href="#" class="btn btn-pink">get started</a>
+      </div>
+      <!-- need to figure out how to turn this off in media query -->
+
+      <div class="hero-image-container">
+        <picture hidden id="hero-mobile">
+          <source srcset="./assets/image-hero-mobile.webp" type="image/webp" />
           <img src="./assets/image-hero-mobile.png" alt="" />
         </picture>
-        <div class="hero-image">
-          <picture id="hero-tablet">
-            <source
-              media="(min-width: 768px)"
-              srcset="./assets/image-hero-desktop.webp"
-              type="image/webp"
-            />
-            <img src="./assets/image-hero-desktop.png" alt="" />
-          </picture>
-        </div>
+        <picture id="hero-tablet">
+          <source srcset="./assets/image-hero-desktop.webp" type="image/webp" />
+          <img src="./assets/image-hero-desktop.png" alt="" />
+        </picture>
+        <picture hidden id="hero-desktop">
+          <source
+            srcset="./assets/image-hero-desktop@2x.webp"
+            type="image/webp"
+          />
+          <img src="./assets/image-hero-desktop@2x.png" alt="" />
+        </picture>
       </div>
+      <!-- </div> -->
     </section>
 
     <!-- ****************** CARDS ******************* -->
