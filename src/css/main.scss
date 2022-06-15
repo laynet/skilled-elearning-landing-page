@@ -4,7 +4,8 @@ $font-family: 'Plus Jakarta Sans', sans-serif;
 
 //media queries
 $desktop: 1260px;
-$tablet: 765px;
+$tablet: 768px;
+$desktop: 900px;
 // colors
 
 $dark-blue-gray: hsla(234, 25%, 52%, 1);
@@ -90,10 +91,11 @@ select {
 
 // utility classes
 
-// .flex {
-//     display: flex;
-
-// }
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
 
 //typography
 .xl {
@@ -246,6 +248,11 @@ nav {
   }
 }
 
+// this was supposed to let the image pass under the header but not working????
+.header {
+  background-color: transparent;
+}
+
 .hero-content {
   padding: 1rem;
   & * {
@@ -265,6 +272,10 @@ nav {
 
   h2 {
     color: $white;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 3.1rem;
   }
 }
 
@@ -306,6 +317,9 @@ footer {
 //     grid-template-columns: 55%, 1fr;
 //   }
 // }
+// .hero {
+//   position: relative;
+// }
 .hero-container {
   @media (min-width: $tablet) {
     // display: grid;
@@ -314,12 +328,14 @@ footer {
     // grid-template-columns: 1fr 45%;
     // grid-template-areas: 'hero-content image';
     display: flex;
-    padding-bottom: 13rem;
+    flex-direction: row;
+    padding-bottom: 6rem;
     // justify-content: flex-start;
     // align-items: center;
     overflow: hidden;
-    position: relative;
+    // position: relative;
     max-width: 880px;
+    // overflow: hidden;
   }
   .hero-content {
     @media (min-width: $tablet) {
@@ -327,21 +343,24 @@ footer {
       width: 50%;
     }
   }
-
   .hero-image {
     @media (min-width: $tablet) {
-      grid-area: 'image';
+      // flex-basis: 20px;
+      //   grid-area: 'image';
       //   position: relative;
+      //   overflow: hidden;
     }
   }
 
   img {
     @media (min-width: $tablet) {
       position: absolute;
-      top: -210px;
-      left: 294px;
+      top: -182px;
+      left: 315px;
       z-index: -1;
-      overflow: hidden;
+      //   overflow: hidden;
+      //   flex-basis: 20px;
+
       //   this keeps getting overwritten???
       //   grid-area: 'image';
       // this is bullshit that I try when i think absolute position isn't the way to go

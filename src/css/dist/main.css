@@ -51,6 +51,12 @@ select {
   font: inherit;
 }
 
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
 .xl {
   font-size: 56px;
   line-height: 70px;
@@ -71,7 +77,7 @@ select {
   font-weight: 800;
   color: #13183e;
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
   .med {
     font-size: 32px;
     line-height: 40px;
@@ -86,7 +92,7 @@ select {
   font-weight: 800;
   color: #13183e;
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
   .sm {
     font-size: 24px;
     line-height: 28px;
@@ -115,7 +121,7 @@ select {
   line-height: 35.28px;
   text-decoration: none;
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
   .logo {
     font-weight: 800;
     font-size: 36px;
@@ -147,7 +153,7 @@ a {
   border: none;
   text-transform: capitalize;
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
   .btn {
     font-size: 18px;
     line-height: 28px;
@@ -195,6 +201,10 @@ nav .header {
   align-items: center;
 }
 
+.header {
+  background-color: transparent;
+}
+
 .hero-content {
   padding: 1rem;
 }
@@ -215,6 +225,11 @@ nav .header {
 .card-component h2 {
   color: white;
 }
+@media (min-width: 768px) {
+  .card-component {
+    margin-top: 3.1rem;
+  }
+}
 
 .card-component--cta {
   border-radius: 15px;
@@ -224,7 +239,7 @@ nav .header {
   margin-top: 3rem;
   background-color: white;
 }
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .card-component--cta {
     padding: 1.5rem;
   }
@@ -242,32 +257,26 @@ footer {
   background: #13183e;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .hero-container {
     display: flex;
-    padding-bottom: 13rem;
+    flex-direction: row;
+    padding-bottom: 6rem;
     overflow: hidden;
-    position: relative;
     max-width: 880px;
   }
 }
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .hero-container .hero-content {
     width: 50%;
   }
 }
-@media (min-width: 765px) {
-  .hero-container .hero-image {
-    grid-area: "image";
-  }
-}
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .hero-container img {
     position: absolute;
-    top: -210px;
-    left: 294px;
+    top: -182px;
+    left: 315px;
     z-index: -1;
-    overflow: hidden;
   }
 }
 
@@ -276,7 +285,7 @@ footer {
   flex-direction: column;
   padding: 0 1rem 5rem 1rem;
 }
-@media (min-width: 765px) {
+@media (min-width: 768px) {
   .card-grid {
     display: grid;
     gap: 0.5rem;
@@ -284,7 +293,7 @@ footer {
     grid-template-rows: repeat(3, 1fr);
   }
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
   .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

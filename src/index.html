@@ -32,13 +32,18 @@
           <a href="#" class="btn btn-pink">get started</a>
         </div>
         <!-- need to figure out how to turn this off in media query -->
-        <!-- <picture id="hero-mobile">
-          <source srcset="./assets/image-hero-mobile.webp" type="image/webp" />
+        <picture id="hero-mobile">
+          <source
+            media="(min-width: 768)"
+            srcset="./assets/image-hero-mobile.webp"
+            type="image/webp"
+          />
           <img src="./assets/image-hero-mobile.png" alt="" />
-        </picture> -->
+        </picture>
         <div class="hero-image">
           <picture id="hero-tablet">
             <source
+              media="(min-width: 768px)"
               srcset="./assets/image-hero-desktop.webp"
               type="image/webp"
             />
