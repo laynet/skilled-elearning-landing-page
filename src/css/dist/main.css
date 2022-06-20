@@ -126,6 +126,11 @@ select {
 .logo.header {
   color: #13183e;
 }
+@media (min-width: 1160px) {
+  .logo.header {
+    margin-left: 3.7rem;
+  }
+}
 .logo.footer {
   color: white;
 }
@@ -187,6 +192,9 @@ a {
   color: #ffa8c4;
 }
 
+nav.header {
+  background-color: transparent;
+}
 nav .footer,
 nav .header {
   padding: 0.6rem;
@@ -194,9 +202,17 @@ nav .header {
   justify-content: space-between;
   align-items: center;
 }
-
-.header {
-  background-color: transparent;
+@media (min-width: 768px) {
+  nav .footer,
+nav .header {
+    margin-right: 2rem;
+  }
+}
+@media (min-width: 1160px) {
+  nav .footer,
+nav .header {
+    margin-right: 10rem;
+  }
 }
 
 .hero-content {
@@ -256,7 +272,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin: auto;
-  min-height: 60vh;
   width: 100%;
   align-items: center;
 }
@@ -265,7 +280,7 @@ footer {
     flex-direction: row;
     overflow: hidden;
     position: relative;
-    min-height: 40vh;
+    min-height: 50vh;
   }
 }
 @media (min-width: 1160px) {
@@ -276,13 +291,16 @@ footer {
 @media (min-width: 768px) {
   .hero .hero-content {
     width: 50%;
-    flex-grow: 75%;
+    margin-bottom: 8rem;
   }
 }
 @media (min-width: 1160px) {
   .hero .hero-content {
     padding: 5rem;
   }
+}
+.hero .hero-mobile {
+  max-width: none;
 }
 @media (min-width: 768px) {
   .hero .hero-mobile {
@@ -309,21 +327,33 @@ footer {
     position: relative;
   }
 }
-.hero .hero-tablet-desktop {
+.hero .hero-tablet {
   display: none;
 }
 @media (min-width: 768px) {
-  .hero .hero-tablet-desktop {
+  .hero .hero-tablet {
     display: block;
     position: absolute;
-    top: -394px;
-    left: -36px;
-    z-index: -1;
+    top: -449px;
+    left: -13px;
     max-width: 700px;
   }
 }
 @media (min-width: 1160px) {
-  .hero .hero-tablet-desktop {
+  .hero .hero-tablet {
+    display: none;
+  }
+}
+@media (min-width: 1747px) {
+  .hero .hero-tablet {
+    display: none;
+  }
+}
+.hero .hero-desktop {
+  display: none;
+}
+@media (min-width: 1160px) {
+  .hero .hero-desktop {
     display: block;
     position: absolute;
     top: -577px;
@@ -332,12 +362,12 @@ footer {
     max-width: fit-content;
   }
 }
-@media (min-width: 1929px) {
-  .hero .hero-tablet-desktop {
+@media (min-width: 1747px) {
+  .hero .hero-desktop {
     display: block;
     position: absolute;
     top: -599px;
-    left: 333px;
+    left: 197px;
     z-index: -1;
   }
 }

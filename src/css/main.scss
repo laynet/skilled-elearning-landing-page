@@ -3,7 +3,7 @@
 $font-family: 'Plus Jakarta Sans', sans-serif;
 
 //media queries
-$xl-desktop: 1929px;
+$xl-desktop: 1747px;
 $desktop: 1160px;
 $tablet: 768px;
 
@@ -148,6 +148,9 @@ select {
 
   &.header {
     color: $blue;
+    @media (min-width: $desktop) {
+      margin-left: 3.7rem;
+    }
   }
 
   &.footer {
@@ -224,6 +227,10 @@ a {
 //components
 
 nav {
+  // this was supposed to let the image pass under the header but not working????
+  &.header {
+    background-color: transparent;
+  }
   .footer,
   .header {
     // margin: 0 0.5rem;
@@ -231,12 +238,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
 
-// this was supposed to let the image pass under the header but not working????
-.header {
-  background-color: transparent;
+    @media (min-width: $tablet) {
+      // padding-left: 2rem;
+      margin-right: 2rem;
+    }
+    @media (min-width: $desktop) {
+      // padding-left: 4.6rem;
+      margin-right: 10rem;
+    }
+  }
 }
 
 .hero-content {
@@ -302,7 +313,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin: auto;
-  min-height: 60vh;
+  // min-height: 60vh;
   width: 100%;
   align-items: center;
 
@@ -310,7 +321,7 @@ footer {
     flex-direction: row;
     overflow: hidden;
     position: relative;
-    min-height: 40vh;
+    min-height: 50vh;
   }
   @media (min-width: $desktop) {
     min-height: 50vh;
@@ -318,7 +329,8 @@ footer {
   .hero-content {
     @media (min-width: $tablet) {
       width: 50%;
-      flex-grow: 75%;
+      // flex-grow: 75%;
+      margin-bottom: 8rem;
     }
     @media (min-width: $desktop) {
       padding: 5rem;
@@ -326,6 +338,7 @@ footer {
   }
 
   .hero-mobile {
+    max-width: none;
     @media (min-width: $tablet) {
       display: none;
     }
@@ -347,16 +360,34 @@ footer {
     }
   }
 
-  .hero-tablet-desktop {
+  .hero-tablet {
     display: none;
     @media (min-width: $tablet) {
       display: block;
       position: absolute;
-      top: -394px;
-      left: -36px;
-      z-index: -1;
+      top: -449px;
+      left: -13px;
+      //   z-index: -1;
+      // max-width: 100%;
       max-width: 700px;
     }
+    @media (min-width: $desktop) {
+      display: none;
+    }
+    @media (min-width: $xl-desktop) {
+      display: none;
+    }
+  }
+  .hero-desktop {
+    display: none;
+    // @media (min-width: $tablet) {
+    //   display: block;
+    //   position: absolute;
+    //   top: -394px;
+    //   left: -36px;
+    //   //   z-index: -1;
+    //   max-width: 700px;
+    // }
     @media (min-width: $desktop) {
       display: block;
       position: absolute;
@@ -369,11 +400,36 @@ footer {
       display: block;
       position: absolute;
       top: -599px;
-      left: 333px;
+      left: 197px;
       z-index: -1;
-      //   max-width: 700px;
     }
   }
+  // .hero-tablet-desktop {
+  //   display: none;
+  //   @media (min-width: $tablet) {
+  //     display: block;
+  //     position: absolute;
+  //     top: -394px;
+  //     left: -36px;
+  //     //   z-index: -1;
+  //     max-width: 700px;
+  //   }
+  //   @media (min-width: $desktop) {
+  //     display: block;
+  //     position: absolute;
+  //     top: -577px;
+  //     left: -75px;
+  //     z-index: -1;
+  //     max-width: fit-content;
+  //   }
+  //   @media (min-width: $xl-desktop) {
+  //     display: block;
+  //     position: absolute;
+  //     top: -599px;
+  //     left: 333px;
+  //     z-index: -1;
+  //   }
+  // }
 }
 
 .card-grid {
