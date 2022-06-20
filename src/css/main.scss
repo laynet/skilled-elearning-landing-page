@@ -3,9 +3,10 @@
 $font-family: 'Plus Jakarta Sans', sans-serif;
 
 //media queries
-$desktop: 1260px;
+$xl-desktop: 1929px;
+$desktop: 1160px;
 $tablet: 768px;
-$desktop: 900px;
+
 // colors
 
 $dark-blue-gray: hsla(234, 25%, 52%, 1);
@@ -65,13 +66,6 @@ body {
   font-family: $font-family;
   min-height: 100vh;
   overflow-x: hidden;
-
-  // font-size: var(--fs-400);
-  // color: hsl( var(--clr-white) );
-  // background-color: hsl( var(--clr-dark) );
-  // line-height: 1.5;
-  // display: grid;
-  // grid-template-rows: min-content 1fr;
 }
 
 /* make images easier to work with */
@@ -87,14 +81,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-// utility classes
-
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
 }
 
 //typography
@@ -307,75 +293,85 @@ nav {
 
 footer {
   background: $blue;
+  flex-shrink: 0;
 }
 
 //layout
 
-// .hero-content {
-//   @media (min-width: $tablet) {
-//     display: grid;
-//     grid-template-columns: 55%, 1fr;
-//   }
-// }
 .hero {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
   min-height: 60vh;
   width: 100%;
   align-items: center;
 
   @media (min-width: $tablet) {
-    // display: flex;
-    // flex-direction: row;
-    // padding-bottom: 6rem;
+    flex-direction: row;
     overflow: hidden;
     position: relative;
-    // align-items: center;
-    // max-width: 880px;
-    // flex: 1 1;
+    min-height: 40vh;
   }
   @media (min-width: $desktop) {
-    // padding-bottom: 20rem;
+    min-height: 50vh;
   }
   .hero-content {
     @media (min-width: $tablet) {
-      //   grid-area: 'hero-content';
       width: 50%;
       flex-grow: 75%;
-      //   flex: 1 1 50%;
+    }
+    @media (min-width: $desktop) {
+      padding: 5rem;
+    }
+  }
+
+  .hero-mobile {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    @media (min-width: $desktop) {
+      display: none;
     }
   }
   .hero-image-container {
+    .hero-mobile {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
     @media (min-width: $tablet) {
-      //   flex-basis: 20px;
-      //   grid-area: 'image';
-      //   position: relative;
-      //   overflow: hidden;
-      flex: 1 1 0;
-      //   width: 50%;
-
       position: relative;
     }
   }
 
-  img {
+  .hero-tablet-desktop {
+    display: none;
     @media (min-width: $tablet) {
+      display: block;
       position: absolute;
       top: -394px;
       left: -36px;
       z-index: -1;
       max-width: 700px;
-      //   overflow: hidden;
-      //   flex-basis: 20px;
-
-      //   this keeps getting overwritten???
-      //   grid-area: 'image';
-      // this is bullshit that I try when i think absolute position isn't the way to go
-      //   max-height: fit-content;
-      //   width: 100%;
-      //   height: 100%;
-      //   object-fit: contain;
+    }
+    @media (min-width: $desktop) {
+      display: block;
+      position: absolute;
+      top: -577px;
+      left: -75px;
+      z-index: -1;
+      max-width: fit-content;
+    }
+    @media (min-width: $xl-desktop) {
+      display: block;
+      position: absolute;
+      top: -599px;
+      left: 333px;
+      z-index: -1;
+      //   max-width: 700px;
     }
   }
 }
@@ -396,5 +392,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
