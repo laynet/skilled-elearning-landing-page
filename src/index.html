@@ -23,7 +23,6 @@
     <main>
       <!-- ****************** HERO ******************* -->
       <section class="hero">
-        <!-- <div class="hero-container"> -->
         <div class="hero-content">
           <h1 class="lg">Maximize skill, minimize budget</h1>
           <p class="xsm">
@@ -32,7 +31,6 @@
           </p>
           <a href="#" class="btn btn-pink">get started</a>
         </div>
-        <!-- need to figure out how to turn this off in media query -->
 
         <div class="hero-image-container">
           <picture id="hero-mobile">
@@ -69,7 +67,54 @@
             />
           </picture>
         </div>
-        <!-- </div> -->
+        <!-- this broke my tablet absolute position an idk how to fix it. -->
+        <!-- <picture>
+          <source
+            media="(min-width: 72.55rem)"
+            type="image/webp"
+            srcset="
+              ./assets/image-hero-desktop.webp,
+              ./assets/image-hero-desktop@2x.webp
+            "
+          />
+          <source
+            media="(min-width: 72.55rem)"
+            srcset="
+              ./assets/image-hero-desktop.png,
+              ./assets/image-hero-desktop@2x.png
+            "
+          />
+          {/*tablet images */}
+          <source
+            class="hero-tablet"
+            media="(min-width: 48rem)"
+            type="image/webp"
+            srcset="
+              ./assets/image-hero-tablet.webp,
+              ./assets/image-hero-tablet@2x.webp
+            "
+          />
+          <source
+            media="(min-width: 48rem)"
+            srcset="
+              ./assets/image-hero-tablet.png,
+              ./assets/image-hero-tablet@2x.png
+            "
+          />
+          {/*Mobile images */}
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/image-hero-mobile.webp,
+              ./assets/image-hero-mobile@2x.webp
+            "
+          />
+          <img
+            srcset="./assets/image-hero-mobile@2x.png"
+            src="./assets/image-hero-mobile.png"
+            alt=""
+          />
+        </picture> -->
       </section>
 
       <!-- ****************** CARDS ******************* -->
